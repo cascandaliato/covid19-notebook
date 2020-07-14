@@ -12,17 +12,17 @@ jobs:
           repository: 'casca/covid19-notebook'
           ref: master
           persist-credentials: true
-      - name: action
+      - name: Update with papermill 📄
         uses: casca/papermill-docker-action@master
         with:
           notebook: charts.ipynb
-      - name: Commit files
+      - name: Commit files 📩
         run: |
           git config --local user.name "casca"
           git config --local user.email "8927157+casca@users.noreply.github.com"
-          git charts.ipynb
+          git add charts.ipynb
           git commit -m "Update lighthouse report for casca.dev"
-      - name: Push changes
+      - name: Push changes 🚀
         uses: ad-m/github-push-action@master
         with:
           repository: 'casca/covid19-notebook'
