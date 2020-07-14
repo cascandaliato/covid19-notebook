@@ -15,7 +15,7 @@ jobs:
           ref: master
           persist-credentials: true
       - name: action
-        uses: casca/papermill-docker-action@v1
+        uses: casca/papermill-docker-action@master
         with:
           notebook: charts.ipynb
       - name: Push changes
