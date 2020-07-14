@@ -14,23 +14,10 @@ jobs:
           repository: 'casca/covid19-notebook'
           ref: master
           persist-credentials: true
-      - run: |
-          apt-get update
-          apt-get install -y python3 python3-pip git
-          python3 -m pip install notebook papermill papermill[all]
-          python3 -m pip install numpy matplotlib pandas seaborn scipy
-      - run: |
-          git clone https://github.com/casca/covid19-notebook.git
-          cd covid19-notebook
-          papermill charts.ipynb charts.ipynb
-          ls -la
-          pwd
-      - name: Commit files
-        run: |
-          git config --local user.name "casca"
-          git config --local user.email "8927157+casca@users.noreply.github.com"
-          git add charts.ipynb forecasts.png grid.png heatmap.png 
-          git commit -m "Update notebook"
+      - name: action
+        uses: casca/papermill-docker-action@v1
+        with:
+          notebook: charts.ipynb
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
