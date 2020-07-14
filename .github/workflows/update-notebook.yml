@@ -1,0 +1,31 @@
+name: Update Notebook
+
+on: push
+
+jobs:
+  update-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          repository: 'casca/covid19-notebook'
+          ref: master
+          persist-credentials: false
+      - run: |
+          apt-get update
+          apt-get install -y python3 python3-pip
+          python3 -m pip install notebook papermill papermill[all]
+          python3 -m pip install numpy matplotlib pandas seaborn scipy
+      - run: papermill charts.ipynb charts.ipynb
+      - name: Commit files
+        run: |
+          git config --local user.name "casca"
+          git config --local user.email "8927157+casca@users.noreply.github.com"
+          git add charts.ipynb
+          git commit -m "Update notebook"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          repository: 'casca/covid19-notebook'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
