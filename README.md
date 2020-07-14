@@ -1,1 +1,1 @@
-[Launch](https://mybinder.org/v2/gh/casca/covid19-notebook/master?filepath=charts.ipynb) an editable version of the notebook or [view it](charts.ipynb) on GitHub.
+[Launch](https://colab.research.google.com/github/casca/covid19-notebook/blob/master/charts.ipynb) an editable version of the notebook on Google Colab or a [view-only version](charts.ipynb) on GitHub.

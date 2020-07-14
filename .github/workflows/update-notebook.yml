@@ -1,6 +1,8 @@
 name: Update Notebook
 
-on: push
+on:
+  schedule:
+    - cron: '* * 20 * *'
 
 jobs:
   with-papermill:
@@ -21,7 +23,7 @@ jobs:
           git config --local user.name "casca"
           git config --local user.email "8927157+casca@users.noreply.github.com"
           git add charts.ipynb
-          git commit -m "Update lighthouse report for casca.dev"
+          git commit -m "Update notebook and charts"
       - name: Push changes 🚀
         uses: ad-m/github-push-action@master
         with:
