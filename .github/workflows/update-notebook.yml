@@ -3,7 +3,7 @@ name: Update Notebook
 on: push
 
 jobs:
-  update-notebook:
+  with-papermill:
     runs-on: ubuntu-latest
     container:
       image: ubuntu
@@ -21,6 +21,8 @@ jobs:
           python3 -m pip install numpy matplotlib pandas seaborn scipy
       - run: |
           ls -l /github/home
+          ls -l /github/workflow
+          ls -l /github/workspace
           papermill charts.ipynb charts.ipynb
           ls -la
           pwd
