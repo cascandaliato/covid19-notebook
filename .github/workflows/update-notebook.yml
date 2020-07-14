@@ -20,6 +20,7 @@ jobs:
           python3 -m pip install notebook papermill papermill[all]
           python3 -m pip install numpy matplotlib pandas seaborn scipy
       - run: |
+          ls -l /github/home
           papermill charts.ipynb charts.ipynb
           ls -la
           pwd
