@@ -3,7 +3,7 @@
 
 _Updated automatically every day at 20:00 (UTC)._
 
-[Launch](https://colab.research.google.com/github/casca/covid19-notebook/blob/master/charts.ipynb) an editable version of the notebook on Google Colab or a [view-only version](charts.ipynb) on GitHub.
+Launch an [editable version](https://colab.research.google.com/github/casca/covid19-notebook/blob/master/charts.ipynb) of the notebook on Google Colab or a [view-only version](charts.ipynb) on GitHub.
 
 <img src="grid.png"/>
 
