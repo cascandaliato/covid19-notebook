@@ -10,3 +10,5 @@ Launch an [editable version](https://colab.research.google.com/github/casca/covi
 <img src="heatmap.png"/>
 
 <img src="forecasts.png"/>
+
+<img src="daily_tests.png"/>
