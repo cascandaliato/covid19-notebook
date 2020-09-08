@@ -3,6 +3,9 @@ name: Update Notebook
 on:
   schedule:
     - cron: '0 18 * * *'
+  push:
+    branches:
+      - master
 
 jobs:
   with-papermill:
