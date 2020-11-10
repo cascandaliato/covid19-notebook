@@ -9,6 +9,6 @@ Launch an [editable version](https://colab.research.google.com/github/cascandali
 
 <img src="heatmap.png"/>
 
-<img src="active_cases_and_hospitalizations.png"/>
+<img src="hospitalizations.png"/>
 
 <img src="daily_tests.png"/>
